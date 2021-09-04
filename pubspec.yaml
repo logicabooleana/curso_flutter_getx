@@ -29,6 +29,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.3.8 # GetX es una solución potente y extraligera para Flutter. Combina la gestión del estado de alto rendimiento, la inyección inteligente de dependencias y la gestión de rutas de forma rápida y práctica.
+  dio: ^4.0.0 # Un potente cliente Http para Dart, que admite interceptores, configuración global, FormData, cancelación de solicitudes, descarga de archivos, tiempo de espera, etc.
+
 
 dev_dependencies:
   flutter_test:
