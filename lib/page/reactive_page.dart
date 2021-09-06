@@ -11,8 +11,38 @@ class ReactivePage extends StatelessWidget {
       init: ReactiveController(),
       builder: (controller) {
         return Scaffold(
-          body: Center(child: Obx(()=>Text(controller.count.value.toString()))),
-          floatingActionButton: FloatingActionButton(onPressed: ()=>controller.increment(),child: Icon(Icons.add),),
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Obx(() => Text('age: ${controller.myPet.edad}')),
+              TextButton(
+                  onPressed: () {
+                    controller.setPetAge(controller.myPet.edad+1);
+                  },
+                  child: Text('Set edad'))
+            ],
+          ),
+          /* body: Obx(() {
+            return ListView(
+              children: controller.mapItems.values
+                  .map(
+                    (e) => ListTile(
+                      title: Text(e),
+                      trailing: IconButton(
+                          onPressed: () {
+                            controller.removeMapItem(key: e);
+                          },
+                          icon: Icon(Icons.delete)),
+                    ),
+                  )
+                  .toList(),
+            );
+          }),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () => controller.addMapItem(),
+            child: Icon(Icons.add),
+          ), */
         );
       },
     );
