@@ -1,9 +1,8 @@
-import 'package:curso_flutter_getx/controller/global_controller.dart';
-import 'package:curso_flutter_getx/widgets/products_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:curso_flutter_getx/controller/global_controller.dart';
+import 'package:curso_flutter_getx/widgets/products_list.dart';
 import 'package:curso_flutter_getx/controller/home_controller.dart';
-import 'home_list.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);

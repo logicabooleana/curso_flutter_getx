@@ -5,15 +5,16 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class GlobalController extends GetxController {
+
   List<Product> _products = [];
   Map<String, Product> _favorites = Map();
-
   Map<String, Product> get favorites => _favorites;
   List<Product> get products => _products;
 
   @override
   void onInit() {
     super.onInit();
+    // load db ...
     print('########### Global - onInit(){_loadProducts}');
     _loadProducts();
   }
